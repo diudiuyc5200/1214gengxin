@@ -78,6 +78,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_0>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			#cooling-cells = <2>;
@@ -114,6 +115,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_1>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			#cooling-cells = <2>;
@@ -145,6 +147,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_2>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			#cooling-cells = <2>;
@@ -176,6 +179,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1024>;
 			next-level-cache = <&L2_3>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_0 &CLUSTER_COST_0>;
 			qcom,lmh-dcvs = <&lmh_dcvs0>;
 			#cooling-cells = <2>;
@@ -207,6 +211,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1740>;
 			next-level-cache = <&L2_4>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			#cooling-cells = <2>;
@@ -247,6 +252,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1740>;
 			next-level-cache = <&L2_5>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			#cooling-cells = <2>;
@@ -287,6 +293,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1740>;
 			next-level-cache = <&L2_6>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_1 &CLUSTER_COST_1>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			#cooling-cells = <2>;
@@ -327,6 +334,7 @@
 			enable-method = "psci";
 			capacity-dmips-mhz = <1740>;
 			next-level-cache = <&L2_7>;
+	freq-energy-model;
 			sched-energy-costs = <&CPU_COST_2 &CLUSTER_COST_2>;
 			qcom,lmh-dcvs = <&lmh_dcvs1>;
 			#cooling-cells = <2>;
@@ -688,6 +696,14 @@
 		cont_splash_memory: cont_splash_region {
 			reg = <0x0 0x9c000000 0x0 0x02400000>;
 			label = "cont_splash_region";
+		};
+
+ramoops: ramoops@a1600000 {
+			compatible = "ramoops";
+			reg = <0x0 0xa1600000 0x0 0x800000>;
+			record-size = <0x80000>;
+			console-size = <0x400000>;
+			pmsg-size = <0x400000>;
 		};
 
 		adsp_mem: adsp_region {
