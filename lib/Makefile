@@ -133,6 +133,8 @@ obj-$(CONFIG_REED_SOLOMON) += reed_solomon/
 obj-$(CONFIG_BCH) += bch.o
 obj-$(CONFIG_LZ4) += lz4/
 obj-$(CONFIG_LZ4HC) += lz4/
+obj-$(CONFIG_LZO_COMPRESS) += lzo/
+obj-$(CONFIG_LZO_DECOMPRESS) += lzo/
 obj-$(CONFIG_LZ4KD_COMPRESS) += lz4kd/
 obj-$(CONFIG_LZ4KD_DECOMPRESS) += lz4kd/
 obj-$(CONFIG_LZ4K_COMPRESS) += lz4k/
@@ -147,6 +149,7 @@ lib-$(CONFIG_DECOMPRESS_GZIP) += decompress_inflate.o
 lib-$(CONFIG_DECOMPRESS_BZIP2) += decompress_bunzip2.o
 lib-$(CONFIG_DECOMPRESS_LZMA) += decompress_unlzma.o
 lib-$(CONFIG_DECOMPRESS_XZ) += decompress_unxz.o
+lib-$(CONFIG_DECOMPRESS_LZO) += decompress_unlzo.o
 lib-$(CONFIG_DECOMPRESS_LZ4) += decompress_unlz4.o
 lib-$(CONFIG_DECOMPRESS_ZSTD) += decompress_unzstd.o
 
